@@ -1,0 +1,98 @@
+/* Put your solutions to the assignment here */
+body {
+	background-color: #eee;
+}
+header{
+	background-color: #49516f;
+	display: flex;
+	align-items: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+header h1 {
+	margin: 0px;
+	color: white;
+}
+header span{
+	margin: 0px;
+	color: white;
+}
+.logo {
+	padding: 5px;
+	margin: 10px;
+	height: 100px;
+	width: 100px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: white;
+}
+.posts {
+	display: flex;
+	flex-wrap: wrap;
+}
+.post-body{
+	height: 200px;
+}
+.post-container {
+	margin: 10px;
+	padding: 10px;
+	background-color: white;
+	display: flex;
+	align-items: center;
+}
+.post-pic{
+	height: auto;
+	width: 200px;
+	margin-right: 10px;
+}
+@media only screen and (min-width: 999px) {
+	.posts{
+		flex-direction: column;
+		align-items: center;
+	}
+	.post{
+		max-width: 800px;
+	}
+}
+@media only screen and (min-width: 400px) and (max-width: 998px) {
+	header{
+		justify-content: center;
+	}
+	.posts{
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	.post-containter{
+		flex-direction: column;
+	}
+	.post{
+		flex: 50%;
+	}
+	.post-pic{
+		width: 100%;
+		height: auto;
+	}
+}
+@media only screen and (max-width: 399px) {
+	header{
+		flex-direction: column;
+		text-align: center;
+	}
+	.logo {
+		border-radius: 50%;
+	}
+	.posts {
+		flex: auto;
+		flex-direction: column;
+	}
+	.post-container {
+		flex-direction: column;
+	}
+	.post-pic{
+		width: 100%;
+		height: auto;
+	}
+}
+
+
+

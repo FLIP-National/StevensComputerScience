@@ -1,0 +1,125 @@
+body{
+	background: #F9B7FF;
+	font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif; 
+	margin: 0;
+	padding: 0;
+	color:white;
+	text-align: center;
+}
+header {
+	background-color: black;
+	background-image: url("images/aboutusheader.jpg");
+	background-size: 100%;
+	background-position: center;
+    height: 350px;
+    padding: 20px;
+	text-align: center;
+	color: white;
+}
+header a {
+	text-decoration: none;
+	margin-top: 0px;
+	color:white;
+	text-shadow: 1px 1px black;
+}
+header .logo a {
+    background-image: url("http://gdurl.com/b9cd");
+    background-size: 300px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 90px;
+    position: relative;
+    text-indent: -9999999px;
+    top: -30px;
+    width: 300px;
+	color:white;
+}
+}nav ul {
+    margin: 0;
+    padding: 0;
+	color:white;
+    list-style-type: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+	color: white;
+}
+
+.sort{
+	display: flex;
+	justify-content: center;
+}
+
+.subheadings {
+    border:1px solid white;
+    padding:5px;
+	margin: 10px;
+    text-align:center;
+}
+
+#first{
+	width: 310px;
+	height: auto;
+}
+#second{
+	width: 120px;
+	height: auto;
+}
+
+.member {
+	height:auto;
+	width:110px;
+	border:1px;
+	margin: 5px;
+	padding: 5px 5px;
+	background-color: white;
+	justify-content: center;
+	align-items: center;
+	font-size: 12px;
+	flex-wrap: wrap;
+	box-shadow: white 0 0 10px;
+}
+
+.member p{
+	color: black;
+	text-align: center;
+}
+
+.member img{
+	height:100px;
+	width: auto;
+}
+
+.staffpost {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	padding:0px;
+	justify-content:center;
+}	
+
+/* FOOTER */
+
+footer {
+	background: black;
+	color: gray;
+	font-size: 12px;
+	padding: 10px 10px;
+	text-align: center;
+	margin:10px;
+}
+
+
+/* Tablet */
+@media only screen and (min-width:400px) and (max-width:998px) {
+header{
+	height:150px;
+}
+
+/* Phone */
+@media only screen and (max-width:399px) {
+header{
+	height:150px;
+}

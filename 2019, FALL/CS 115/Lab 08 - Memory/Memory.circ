@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project source="2.13.8" version="1.0">
+This file is intended to be loaded by Logisim-evolution (https://github.com/reds-heig/logisim-evolution).
+<lib desc="#Wiring" name="0">
+    <tool name="Constant">
+      <a name="facing" val="south"/>
+      <a name="value" val="0x0"/>
+    </tool>
+  </lib>
+  <lib desc="#Gates" name="1"/>
+  <lib desc="#Base" name="2">
+    <tool name="Text Tool">
+      <a name="text" val=""/>
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="halign" val="center"/>
+      <a name="valign" val="base"/>
+    </tool>
+  </lib>
+  <main name="D_Latch"/>
+  <options>
+    <a name="gateUndefined" val="ignore"/>
+    <a name="simlimit" val="1000"/>
+    <a name="simrand" val="0"/>
+    <a name="tickmain" val="half_period"/>
+  </options>
+  <mappings>
+    <tool lib="2" map="Button2" name="Menu Tool"/>
+    <tool lib="2" map="Button3" name="Menu Tool"/>
+    <tool lib="2" map="Ctrl Button1" name="Menu Tool"/>
+  </mappings>
+  <toolbar>
+    <tool lib="2" name="Poke Tool"/>
+    <tool lib="2" name="Edit Tool"/>
+    <tool lib="2" name="Text Tool">
+      <a name="text" val=""/>
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="halign" val="center"/>
+      <a name="valign" val="base"/>
+    </tool>
+    <sep/>
+    <tool lib="0" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="labelloc" val="north"/>
+    </tool>
+    <tool lib="0" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="south"/>
+    </tool>
+    <tool lib="1" name="NOT Gate">
+      <a name="facing" val="south"/>
+    </tool>
+    <tool lib="1" name="AND Gate">
+      <a name="inputs" val="5"/>
+    </tool>
+    <tool lib="1" name="OR Gate">
+      <a name="facing" val="south"/>
+      <a name="inputs" val="5"/>
+    </tool>
+  </toolbar>
+  <circuit name="NOR">
+    <a name="circuit" val="NOR"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <a name="circuitvhdl" val="false"/>
+    <a name="circuitvhdlpath" val=""/>
+    <appear>
+      <ellipse cx="80.0" cy="104.0" fill="none" rx="4.0" ry="4.0" stroke="#000000" stroke-width="2"/>
+      <path d="M105,50 Q81,65 55,50" fill="none" stroke="#000000" stroke-width="2"/>
+      <path d="M55,50 Q59,90 80,100" fill="none" stroke="#000000" stroke-width="2"/>
+      <path d="M105,50 Q101,90 80,100" fill="none" stroke="#000000" stroke-width="2"/>
+      <circ-port height="8" pin="370,110" width="8" x="56" y="46"/>
+      <circ-port height="8" pin="430,110" width="8" x="96" y="46"/>
+      <circ-port height="10" pin="400,420" width="10" x="75" y="105"/>
+      <circ-anchor facing="south" height="6" width="6" x="77" y="47"/>
+    </appear>
+    <wire from="(420,250)" to="(430,250)"/>
+    <wire from="(370,250)" to="(380,250)"/>
+    <wire from="(400,370)" to="(400,420)"/>
+    <wire from="(370,110)" to="(370,250)"/>
+    <wire from="(430,110)" to="(430,250)"/>
+    <wire from="(400,300)" to="(400,340)"/>
+    <comp lib="2" loc="(417,42)" name="Text">
+      <a name="text" val="Using only OR and NOT gates, please create the NOR gate"/>
+    </comp>
+    <comp lib="0" loc="(400,420)" name="Pin">
+      <a name="facing" val="north"/>
+      <a name="output" val="true"/>
+      <a name="label" val="Out"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="1" loc="(400,370)" name="NOT Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="2" loc="(271,29)" name="Text">
+      <a name="text" val="NOR"/>
+      <a name="font" val="SansSerif plain 20"/>
+    </comp>
+    <comp lib="0" loc="(430,110)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="label" val="Y"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="0" loc="(370,110)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="label" val="X"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="1" loc="(400,300)" name="OR Gate">
+      <a name="facing" val="south"/>
+      <a name="inputs" val="5"/>
+    </comp>
+    <comp lib="2" loc="(402,65)" name="Text">
+      <a name="text" val="This gate returns 1 if both bits are 0, and 1 otherwise"/>
+    </comp>
+  </circuit>
+  <circuit name="TwoBit_Decoder">
+    <a name="circuit" val="TwoBit_Decoder"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <a name="circuitvhdl" val="false"/>
+    <a name="circuitvhdlpath" val=""/>
+    <wire from="(60,70)" to="(120,70)"/>
+    <wire from="(160,320)" to="(220,320)"/>
+    <wire from="(70,420)" to="(70,490)"/>
+    <wire from="(70,490)" to="(320,490)"/>
+    <wire from="(250,400)" to="(250,410)"/>
+    <wire from="(120,60)" to="(120,70)"/>
+    <wire from="(340,210)" to="(340,220)"/>
+    <wire from="(50,210)" to="(50,420)"/>
+    <wire from="(50,100)" to="(160,100)"/>
+    <wire from="(250,360)" to="(350,360)"/>
+    <wire from="(160,230)" to="(160,320)"/>
+    <wire from="(60,410)" to="(100,410)"/>
+    <wire from="(60,320)" to="(60,410)"/>
+    <wire from="(260,110)" to="(300,110)"/>
+    <wire from="(60,320)" to="(160,320)"/>
+    <wire from="(60,130)" to="(160,130)"/>
+    <wire from="(150,410)" to="(250,410)"/>
+    <wire from="(400,350)" to="(440,350)"/>
+    <wire from="(160,230)" to="(260,230)"/>
+    <wire from="(50,210)" to="(210,210)"/>
+    <wire from="(70,420)" to="(100,420)"/>
+    <wire from="(310,220)" to="(340,220)"/>
+    <wire from="(320,370)" to="(350,370)"/>
+    <wire from="(50,60)" to="(50,100)"/>
+    <wire from="(250,320)" to="(250,360)"/>
+    <wire from="(50,420)" to="(70,420)"/>
+    <wire from="(50,100)" to="(50,210)"/>
+    <wire from="(190,100)" to="(210,100)"/>
+    <wire from="(190,130)" to="(210,130)"/>
+    <wire from="(240,210)" to="(260,210)"/>
+    <wire from="(60,70)" to="(60,130)"/>
+    <wire from="(320,370)" to="(320,490)"/>
+    <wire from="(60,130)" to="(60,320)"/>
+    <comp lib="2" loc="(625,150)" name="Text">
+      <a name="text" val="11 should turn on Output3 and nothing else"/>
+    </comp>
+    <comp lib="0" loc="(340,210)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="Output1"/>
+      <a name="labelloc" val="south"/>
+    </comp>
+    <comp lib="2" loc="(623,136)" name="Text">
+      <a name="text" val="10 should turn on Output2 and nothing else"/>
+    </comp>
+    <comp lib="1" loc="(250,320)" name="NOT Gate"/>
+    <comp lib="2" loc="(624,121)" name="Text">
+      <a name="text" val="01 should turn on Output1 and nothing else"/>
+    </comp>
+    <comp lib="1" loc="(190,130)" name="NOT Gate"/>
+    <comp lib="1" loc="(150,410)" name="AND Gate">
+      <a name="inputs" val="5"/>
+    </comp>
+    <comp lib="2" loc="(682,70)" name="Text">
+      <a name="text" val="Using only AND and NOT gates, please write this decoder circuit"/>
+    </comp>
+    <comp lib="0" loc="(50,60)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="label" val="Input0"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="2" loc="(552,29)" name="Text">
+      <a name="text" val="2 Bit Decoder"/>
+      <a name="font" val="SansSerif plain 20"/>
+    </comp>
+    <comp lib="1" loc="(310,220)" name="AND Gate">
+      <a name="inputs" val="5"/>
+    </comp>
+    <comp lib="1" loc="(260,110)" name="AND Gate">
+      <a name="inputs" val="5"/>
+    </comp>
+    <comp lib="2" loc="(655,92)" name="Text">
+      <a name="text" val="Consider the input 01 to mean Input0 is 0, Input1 is 1."/>
+    </comp>
+    <comp lib="0" loc="(250,400)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="Ouput3"/>
+      <a name="labelloc" val="south"/>
+    </comp>
+    <comp lib="0" loc="(120,60)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="label" val="Input1"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="0" loc="(440,350)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="Ouput2"/>
+      <a name="labelloc" val="south"/>
+    </comp>
+    <comp lib="2" loc="(624,107)" name="Text">
+      <a name="text" val="00 should turn on Output0 and nothing else"/>
+    </comp>
+    <comp lib="1" loc="(190,100)" name="NOT Gate"/>
+    <comp lib="1" loc="(240,210)" name="NOT Gate"/>
+    <comp lib="0" loc="(300,110)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="Output0"/>
+      <a name="labelloc" val="south"/>
+    </comp>
+    <comp lib="1" loc="(400,350)" name="AND Gate">
+      <a name="inputs" val="5"/>
+    </comp>
+  </circuit>
+  <circuit name="SR_Latch">
+    <a name="circuit" val="SR_Latch"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <a name="circuitvhdl" val="false"/>
+    <a name="circuitvhdlpath" val=""/>
+    <wire from="(180,100)" to="(180,150)"/>
+    <wire from="(260,170)" to="(270,170)"/>
+    <wire from="(60,200)" to="(200,200)"/>
+    <wire from="(70,120)" to="(70,140)"/>
+    <wire from="(270,170)" to="(300,170)"/>
+    <wire from="(200,190)" to="(200,200)"/>
+    <wire from="(70,140)" to="(270,140)"/>
+    <wire from="(50,80)" to="(120,80)"/>
+    <wire from="(270,140)" to="(270,170)"/>
+    <wire from="(300,130)" to="(300,170)"/>
+    <wire from="(180,150)" to="(200,150)"/>
+    <wire from="(70,120)" to="(120,120)"/>
+    <comp lib="2" loc="(429,24)" name="Text">
+      <a name="text" val="S-R Latch"/>
+      <a name="font" val="SansSerif plain 20"/>
+    </comp>
+    <comp loc="(200,170)" name="NOR"/>
+    <comp lib="2" loc="(699,130)" name="Text">
+      <a name="text" val="This makes the latch different from any circuit you've worked with before, and the basis for computer memory."/>
+    </comp>
+    <comp lib="0" loc="(60,200)" name="Pin">
+      <a name="pull" val="down"/>
+      <a name="label" val="S"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="2" loc="(726,198)" name="Text">
+      <a name="text" val="To fix this, break any loop in your circuit, then in the Simulate menu up top turn &quot;Simulation Enabled&quot; on and off again"/>
+    </comp>
+    <comp loc="(120,100)" name="NOR"/>
+    <comp lib="2" loc="(561,43)" name="Text">
+      <a name="text" val="Using two of the NOR gate you just wrote, create an S-R latch"/>
+    </comp>
+    <comp lib="2" loc="(705,66)" name="Text">
+      <a name="text" val="In this circuit, each input feeds one NOR gate, and the output of each NOR gate loops intp the other input's gate"/>
+    </comp>
+    <comp lib="2" loc="(667,170)" name="Text">
+      <a name="text" val="If your wires turn red and Logism yells at you for apparent oscillation, you've messed something up."/>
+    </comp>
+    <comp lib="2" loc="(580,117)" name="Text">
+      <a name="text" val="Notice that in the SR=00 state, the output Q could be either 0 or 1 !  "/>
+    </comp>
+    <comp lib="2" loc="(731,82)" name="Text">
+      <a name="text" val="The output should become 1 when S is turned on, 0 when R is turned on, and remain whatever it is if both are turned off"/>
+    </comp>
+    <comp lib="2" loc="(668,213)" name="Text">
+      <a name="text" val="Then, draw your loop back in and it should function properly. If not, go to someone's office hours."/>
+    </comp>
+    <comp lib="0" loc="(50,80)" name="Pin">
+      <a name="pull" val="down"/>
+      <a name="label" val="R"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="2" loc="(639,184)" name="Text">
+      <a name="text" val="Logism will also throw this error every time you open a successfully built latch's .circ file"/>
+    </comp>
+    <comp lib="2" loc="(565,96)" name="Text">
+      <a name="text" val="The behavior of this circuit is not defined if both S and R are on"/>
+    </comp>
+    <comp lib="0" loc="(300,130)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="pull" val="up"/>
+      <a name="label" val="Q"/>
+      <a name="labelloc" val="south"/>
+    </comp>
+  </circuit>
+  <circuit name="D_Latch">
+    <a name="circuit" val="D_Latch"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <a name="circuitvhdl" val="false"/>
+    <a name="circuitvhdlpath" val=""/>
+    <wire from="(240,100)" to="(240,170)"/>
+    <wire from="(70,160)" to="(70,230)"/>
+    <wire from="(170,110)" to="(170,120)"/>
+    <wire from="(310,170)" to="(310,190)"/>
+    <wire from="(700,190)" to="(700,220)"/>
+    <wire from="(70,110)" to="(70,130)"/>
+    <wire from="(40,210)" to="(140,210)"/>
+    <wire from="(70,110)" to="(170,110)"/>
+    <wire from="(70,230)" to="(170,230)"/>
+    <wire from="(140,150)" to="(170,150)"/>
+    <wire from="(140,210)" to="(170,210)"/>
+    <wire from="(220,130)" to="(310,130)"/>
+    <wire from="(50,110)" to="(70,110)"/>
+    <wire from="(220,210)" to="(240,210)"/>
+    <wire from="(300,190)" to="(310,190)"/>
+    <wire from="(370,100)" to="(370,150)"/>
+    <wire from="(240,100)" to="(370,100)"/>
+    <wire from="(140,150)" to="(140,210)"/>
+    <wire from="(310,190)" to="(700,190)"/>
+    <comp lib="2" loc="(832,522)" name="Text">
+      <a name="text" val="The S-R latch we just designed has several flaws, such as both S and R being 1 not having defined output"/>
+    </comp>
+    <comp lib="1" loc="(70,160)" name="NOT Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="2" loc="(988,736)" name="Text">
+      <a name="text" val="Cindy Zhang I pledge my honor that I have abided by the Stevens Honor System."/>
+    </comp>
+    <comp lib="0" loc="(40,210)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="2" loc="(41,198)" name="Text"/>
+    <comp lib="2" loc="(1159,689)" name="Text">
+      <a name="text" val="Hint: Check out week8.pdf"/>
+    </comp>
+    <comp lib="2" loc="(27,242)" name="Text"/>
+    <comp lib="2" loc="(730,537)" name="Text">
+      <a name="text" val="The D latch improves on the S-R by having one input, D, and a Strobe."/>
+    </comp>
+    <comp loc="(310,150)" name="NOR"/>
+    <comp lib="0" loc="(700,220)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="Output"/>
+      <a name="labelloc" val="south"/>
+    </comp>
+    <comp lib="2" loc="(562,504)" name="Text">
+      <a name="text" val="D Latch"/>
+      <a name="font" val="SansSerif plain 20"/>
+    </comp>
+    <comp lib="2" loc="(772,659)" name="Text">
+      <a name="text" val="D will feed eventually into both S and R inputs to the S-R latch, just invert one of them"/>
+    </comp>
+    <comp lib="0" loc="(50,110)" name="Pin">
+      <a name="label" val="D"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="1" loc="(220,210)" name="AND Gate">
+      <a name="inputs" val="5"/>
+    </comp>
+    <comp lib="2" loc="(25,228)" name="Text"/>
+    <comp lib="2" loc="(754,602)" name="Text">
+      <a name="text" val="If Strobe is 0, then the value of D should have no impact at all on the output bit"/>
+    </comp>
+    <comp loc="(240,190)" name="NOR"/>
+    <comp lib="1" loc="(220,130)" name="AND Gate">
+      <a name="inputs" val="5"/>
+    </comp>
+    <comp lib="2" loc="(779,646)" name="Text">
+      <a name="text" val="If Strobe is 0, you need to stop any inputs to your S-R latch, consider how to do that"/>
+    </comp>
+    <comp lib="2" loc="(672,673)" name="Text">
+      <a name="text" val="This avoids the situation where both S and R are on"/>
+    </comp>
+    <comp lib="2" loc="(34,229)" name="Text">
+      <a name="text" val="strobe"/>
+    </comp>
+    <comp lib="2" loc="(52,203)" name="Text"/>
+    <comp lib="2" loc="(711,560)" name="Text">
+      <a name="text" val="Your circuit should use 2 NOR gates, 2 AND gates, and 1 NOT. "/>
+    </comp>
+    <comp lib="2" loc="(723,618)" name="Text">
+      <a name="text" val="If Strobe is 1, then the value of output should become the value of D"/>
+    </comp>
+    <comp lib="2" loc="(84,228)" name="Text"/>
+    <comp lib="2" loc="(871,634)" name="Text">
+      <a name="text" val="This is accomplished with an S-R latch as part of the D latch - do not drag in your pre-built SR latch, create it anew!"/>
+    </comp>
+    <comp lib="2" loc="(726,698)" name="Text">
+      <a name="text" val="The whole oscillation deal also applies here - be ready to fight Logism"/>
+    </comp>
+  </circuit>
+</project>

@@ -1,0 +1,110 @@
+body{
+	background: #F9B7FF;
+	color: white;
+	font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif; 
+	margin: 0;
+	padding: 0;
+}
+header {
+	background-color: black;
+	background-image: url("images/breakfastheader.jpg");
+	background-size: 100%;
+	background-position: center;
+    height: 400px;
+    padding: 20px;
+	text-align: center;
+}
+header a {
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+	margin-top: 40px;
+	text-shadow: 1px 1px black;
+}
+header .logo a {
+    background-image: url("http://gdurl.com/b9cd");
+    background-size: 300px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 80px;
+    position: relative;
+    text-indent: -9999999px;
+    top: -30px;
+    width: 300px;
+}
+
+h1{
+	text-shadow: 1px 1px black;
+}
+
+}nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.recipe{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	width: 700px;
+	height: auto;
+	flex-wrap: wrap;
+}
+
+.recipe img{
+	height: auto;
+	width: 400px;
+	margin: 5px;
+	padding: 5px;
+	background-color: white;
+	box-shadow: 5px 5px 5px gray;
+}
+
+.recipe figcaption{
+	color: black;
+	padding: 2px;
+	background-color: white;
+	box-shadow: 5px 5px 5px gray;
+	width: 400px;
+	height: auto;
+	text-align:center;
+
+}
+
+#sortthis{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+/* Tablet */
+@media only screen and (min-width:400px) and (max-width:998px) {
+header{
+	height:170px;
+}
+
+.features{
+	display: flex;
+	flex-wrap: wrap;
+}
+}
+
+
+/* Phone */
+@media only screen and (max-width:399px) {
+header{
+	height:150px;
+}
+
+.features{
+	flex-wrap: wrap;
+}
+}

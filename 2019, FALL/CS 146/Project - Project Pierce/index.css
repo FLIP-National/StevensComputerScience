@@ -1,0 +1,98 @@
+body{
+	background: #F9A7B0;
+	color: white;
+	font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif; 
+	margin: 0;
+	padding: 0;
+}
+header {
+	background-color: black;
+	background-image: url("images/home.jpg");
+	background-size: 100%;
+	background-position: center;
+    height: 400px;
+    padding: 20px;
+	text-align: center;
+	box-shadow: 1px gray;
+}
+
+header a {
+	text-decoration: none;
+	color: white;
+	text-shadow: 1px 1px black;
+}
+
+h1{
+	text-shadow: 1px 1px black;
+}
+
+}nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+/* FEATURES */
+
+.features {
+    background: #F9A7B0;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+	justify-content: center;
+}
+
+.features figure {
+	margin: 5px;
+	text-align: center;
+	
+}
+
+.features figure img {
+	border: 2px solid white;
+	border-radius: 50%;
+	box-shadow: white 0 0 10px;
+	width: 200px;
+}
+
+/* FOOTER */
+
+footer {
+	background: black;
+	color: gray;
+	font-size: 12px;
+	padding: 20px 20px;
+	text-align: center;
+	margin:10px 10px 0px 10px;
+	justify-content: flex-end;
+}
+
+/* Tablet */
+@media only screen and (min-width:400px) and (max-width:998px) {
+header{
+	height:200px;
+}
+
+.features{
+	display: flex;
+	flex-wrap: wrap;
+}
+}
+
+
+/* Phone */
+@media only screen and (max-width:399px) {
+header{
+	height:150px;
+}
+
+.features{
+	flex-wrap: wrap;
+}
+}

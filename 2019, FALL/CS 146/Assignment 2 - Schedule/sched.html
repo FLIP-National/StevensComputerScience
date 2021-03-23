@@ -1,0 +1,234 @@
+<!--
+    Cindy Zhang, Lasya Josyula, Madison Gaudet, Anushtup Bhowmik, Tyler Kaminski
+    Professor Dunn
+    CS146D
+    11/26/2019
+
+    I pledge my honor that I have abided by the Stevens Honor System.
+    Cindy Zhang, Lasya Josyula, Madison Gaudet, Anushtup Bhowmik, Tyler Kaminski
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Interactive Schedule</title>
+        <meta charset="UTF-8">
+        <link rel=stylesheet href=courses.css>
+	    <script type="text/javascript" src="courses.js"> </script>
+    </head>
+    <body>
+	    <h1>Example Stevens Student First Semester Schedule</h1>
+        <ul>
+        	<li>
+                <input type=checkbox id=cal103check onclick=showCourse("cal103text","cal103check","cal103cell","cal103color")>
+                <input type=color id=cal103color onchange=colorCourse("cal103cell","cal103color") value="#FF0000">
+                <u>CAL103C</u> Writing & Communications Colloquium
+            </li>
+        	<li>
+                <input type=checkbox id=cs115check onclick=showCourse("cs115text","cs115check","cs115cell","cs115color")>
+                <input type=color id=cs115color onchange=colorCourse("cs115cell","cs115color") value="#1AFF00">
+                <u>CS115C/LL</u> Introduction to Computer Science
+            </li>
+        	<li>
+                <input type=checkbox id=cs146check onclick=showCourse("cs146text","cs146check","cs146cell","cs146color")>
+                <input type=color id=cs146color onchange=colorCourse("cs146cell","cs146color") value="#B400FF">
+                <u>CS146D</u> Introduction to Web Programming & Website Development
+            </li>
+        	<li>
+                <input type=checkbox id=ma121check onclick=showCourse("ma121text","ma121check","ma121cell","ma121color")>
+                <input type=color id=ma121color onchange=colorCourse("ma121cell","ma121color") value="#0029FF">
+                <u>MA121A/RD</u> Differential Calculus
+            </li>
+        	<li>
+                <input type=checkbox id=pep111check onclick=showCourse("pep111text","pep111check","pep111cell","pep111color")>
+                <input type=color id=pep111color onchange=colorCourse("pep111cell","pep111color") value="#FF8B00">
+                <u>PEP111C/RF</u> Mechanics
+            </li>
+        	<li>
+                <input type=checkbox id=d110check onclick=showCourse("d110text","d110check","d110cell","d110color")>
+                <input type=color id=d110color onchange=colorCourse("d110cell","d110color") value="#EDFF00">
+                <u>D110A/B/C</u> Freshman Quiz
+            </li>
+        </ul>
+        <table border=1 width=800px>
+            <thead>
+                <th>Time</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+            </thead>
+            <tbody>
+        	    <tr>
+        	    	<td align=right>09:00 AM</td>
+                    <td rowspan="2" class=cal103cell><p class=cal103text>CAL103C</p></td>
+        	    	<td></td>
+                    <td rowspan="2" class=cal103cell><p class=cal103text>CAL103C</p></td>
+        	    	<td></td>
+                    <td rowspan="2" class=cal103cell><p class=cal103text>CAL103C</p></td>
+        	    </tr>
+        	    <tr>
+        	    	<td align=right>09:30 AM</td>
+        	    	<td rowspan="2" class=ma121cell><p class=ma121text>MA121RD</p></td>
+        	    	<td rowspan="2" class=ma121cell><p class=ma121text>MA121RD</p></td>
+        	    </tr>
+        	    <tr>
+        	    	<td align=right>10:00 AM</td>
+        	    	<td rowspan="2" class=cs115cell><p class=cs115text>CS115C</p></td>
+        	    	<td rowspan="2" class=cs115cell><p class=cs115text>CS115C</p></td>
+        	    	<td rowspan="2" class=cs115cell><p class=cs115text>CS115C</p></td>
+        	    </tr>
+        	    <tr>
+        	    	<td align=right>10:30 AM</td>
+        	    	<td></td>
+        	    	<td></td>
+        	    </tr>
+        	    <tr>
+        	    	<td align=right>11:00 AM</td>
+        	    	<td></td>
+        	    	<td></td>
+        	    	<td></td>
+        	    	<td></td>
+        	    	<td></td>
+        	    </tr>
+        	    <tr>
+        	    	<td align=right>11:30 AM</td>
+        	    	<td></td>
+        	    	<td></td>
+        	    	<td></td>
+        	    	<td></td>
+        	    	<td></td>
+        	    </tr>
+        	    <tr>
+        	    	<td align=right>12:00 PM</td>
+        	    	<td rowspan="2" class=ma121cell><p class=ma121text>MA121A</p></td>
+        	    	<td></td>
+        	    	<td rowspan="2" class=ma121cell><p class=ma121text>MA121A</p></td>
+        	    	<td></td>
+        	    	<td rowspan="2" class=ma121cell><p class=ma121text>MA121A</p></td>
+        	    </tr>
+        	    <tr>
+        	    	<td align=right>12:30 PM</td>
+        	    	<td rowspan="4" class=pep111cell><p class=pep111text>PEP111RF</p></td>
+        	    	<td></td>
+        	    </tr>
+        	    <tr>
+        	    	<td align=right>01:00 PM</td>
+        	    	<td></td>
+        	    	<td></td>
+        	    	<td></td>
+        	    	<td></td>
+        	    </tr>
+        	    <tr>
+        	    	<td align=right>01:30 PM</td>
+        	    	<td></td>
+        	    	<td></td>
+        	    	<td></td>
+        	    	<td></td>
+        	    </tr>
+        	    <tr>
+        	    	<td align=right>02:00 PM</td>
+        	    	<td rowspan="2" class=pep111cell><p class=pep111text>PEP111C</p></td>
+        	    	<td></td>
+        	    	<td></td>
+        	    	<td rowspan="2" class=pep111cell><p class=pep111text>PEP111C</p></td>
+        	    </tr>
+        	    <tr>
+        	    	<td align=right>02:30 PM</td>
+        	    	<td></td>
+        	    	<td></td>
+        	    	<td></td>
+        	    </tr>
+        	    <tr>
+        	    	<td align=right>03:00 PM</td>
+        	    	<td></td>
+        	    	<td></td>
+        	    	<td></td>
+        	    	<td></td>
+        	    	<td></td>
+        	    </tr>
+        	    <tr>
+        	    	<td align=right>03:30 PM</td>
+        	    	<td></td>
+        	    	<td rowspan="3" class=cs146cell><p class=cs146text>CS146D</p></td>
+        	    	<td></td>
+        	    	<td rowspan="3" class=cs146cell><p class=cs146text>CS146D</p></td>
+        	    	<td></td>
+        	    </tr>
+        	    <tr>
+        	    	<td align=right>04:00 PM</td>
+        	    	<td></td>
+        	    	<td></td>
+        	    	<td></td>
+        	    </tr>
+        	    <tr>
+        	    	<td align=right>04:30 PM</td>
+        	    	<td></td>
+        	    	<td></td>
+        	    	<td></td>
+        	    </tr>
+        	    <tr>
+        	    	<td align=right>05:00 PM</td>
+        	    	<td rowspan="2" class=d110cell><p class=d110text>D110A</p></td>
+        	    	<td rowspan="2" class=d110cell><p class=d110text>D110B</p></td>
+        	    	<td rowspan="2" class=d110cell><p class=d110text>D110C</p></td>
+        	    	<td></td>
+        	    	<td></td>
+        	    </tr>
+        	    <tr>
+        	    	<td align=right>05:30 PM</td>
+        	    	<td></td>
+        	    	<td></td>
+        	    </tr>
+        	    <tr>
+        	    	<td align=right>06:00 PM</td>
+        	    	<td></td>
+        	    	<td></td>
+        	    	<td></td>
+        	    	<td></td>
+        	    	<td></td>
+        	    </tr>
+        	    <tr>
+        	    	<td align=right>06:30 PM</td>
+        	    	<td></td>
+        	    	<td></td>
+        	    	<td></td>
+        	    	<td></td>
+        	    	<td></td>
+        	    </tr>
+        	    <tr>
+        	    	<td align=right>07:00 PM</td>
+        	    	<td></td>
+        	    	<td></td>
+        	    	<td></td>
+        	    	<td rowspan="4" class=cs115cell><p class=cs115text>CS115LL</p></td>
+        	    	<td></td>
+        	    </tr>
+        	    <tr>
+        	    	<td align=right>07:30 PM</td>
+        	    	<td></td>
+        	    	<td></td>
+        	    	<td></td>
+        	    	<td></td>
+        	    </tr>
+        	    <tr>
+        	    	<td align=right>08:00 PM</td>
+        	    	<td></td>
+        	    	<td></td>
+        	    	<td></td>
+        	    	<td></td>
+        	    </tr>
+        	    <tr>
+        	    	<td align=right>08:30 PM</td>
+        	    	<td></td>
+        	    	<td></td>
+        	    	<td></td>
+        	    	<td></td>
+        	    </tr>
+            </tbody>
+        </table>
+        <p>I pledge my honor that I have abided by the Stevens Honor System.</p>
+        <p>Cindy Zhang, Lasya Josyula, Madison Gaudet, Anushtup Bhowmik, Tyler Kaminski</p>
+    </body>
+</html>
