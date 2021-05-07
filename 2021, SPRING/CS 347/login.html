@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <title>IoT Details</title>
+  <head><script src="main.js"></script></head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <body class="-black">
+
+  <nav class="-sidebar -bar-block -small -hide-small -center">
+    <a href="#" class="-bar-item -button -padding-large -hover-black">
+      <i class="fa fa-home -xxlarge"></i>
+      <p>HOME</p>
+    </a>
+    <a href="#about" class="-bar-item -button -padding-large -hover-black">
+      <i class="fa fa-user -xxlarge"></i>
+      <p>ABOUT</p>
+    </a>
+  </nav>
+
+  <!-- Navbar on small screens -->
+  <div class="-top -hide-large -hide-medium" id="myNavbar">
+    <div class="-bar -black -opacity -hover-opacity-off -center -small">
+      <a href="#home" class="-bar-item -button" style="width:50% !important">HOME</a>
+      <a href="#about" class="-bar-item -button" style="width:50% !important">ABOUT</a>
+    </div>
+  </div>
+
+
+  <div class="-padding-large" id="main">
+    <!--HOME-->
+    <div class="-padding-large -center" id="home">
+      <i class="fa fa-train -xxlarge -trainicon"></i>
+      <header class="-container -padding-32 -center -black" id="home">
+        <h1 style="font-size:150px;margin-top:0px">Welcome to Hugs the Rail.</h1>
+      </header>
+      <form name = "login">
+        <div class = "-center" style = "position:relative; padding-bottom:15px;">
+            Username: <input type = 'text' name = "userid">
+        </div>
+        <div class = "-center" style = "position:relative; padding-bottom:15px;">
+            Password: <input type = 'text' name = "password">
+        </div>
+        <div class = "-center" style = "position:relative;padding-bottom:15px;">
+          <button type = "reset" onclick = "check(this.form)" class = "nicebutton"> Login </button>
+        </div>
+      </form>
+    </div>
+
+  <!-- About Section -->
+  <div class="-content -justify -text-grey -padding-64" id="about">
+    <h2 class="-text-light-grey">ABOUT</h2>
+    <hr style="width:200px" class="-opacity">
+    <p>
+        Internet of Things: Hugs The Rail is a project that will produce a product to railroad users and 
+        supporters to enhance the ride. These changes will include being able to make decisions locally 
+        in absence of cellular and wifi connectivity back the offices, being able to capture data 
+        from the locomotives and its surrounding environment, issuing an analytic engine on board to 
+        process as much information to safely guide passengers as well as the conductor on their destination, 
+        make decision that is passed on the locomotive control system, providing room for the operator 
+        to enter commands to receive status, and the ability to download the latest rules from the cloud 
+        into the engine. The Little Engineers That Could, Team Eight is a talented team filled with curiosity, 
+        structured by organized members, and constructed with knowledge to perform these tasks.
+    </p>
+    <p>
+        Currently, the train system involved with the Hugs the Rail system is completely reliant on the internet 
+        and network connection it has. If a scenario occurred where the internet / network connection was lost, 
+        however, the trains would be lost with no idea on where to go or what to do incase of an emergency. 
+        This is precisely the problem at hand. The Hugs the Rail system will implement sensors into these trains, 
+        which function locally, not relying on a network connection with the outside world, so that the trains will 
+        function in a scenario where there is no possible way to connect to the internet. 
+    </p>
+    <p>
+        Locomotives used by Hugs the Rails should aim to get every package onboard as quickly and efficiently 
+        as possible so that the people and companies can get to their parcels in a timely manner. They 
+        should also be ensured that all systems are updated for their safety alongside the new protocols. 
+    </p>
+  </div>
+</div>
+</html>
+
