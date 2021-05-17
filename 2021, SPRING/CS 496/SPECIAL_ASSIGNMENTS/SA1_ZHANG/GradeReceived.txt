@@ -1,0 +1,10 @@
+Grade		: 100%
+Reason		:
+-------------------------------------------------------
+TOTAL		: 100.000 pts 	| 41 / 41 tests passed 
+emptyqueue	:   5.000 pts 	|  1 /  1 tests passed 
+addq		:  15.000 pts 	| 10 / 10 tests passed 
+remove		:  25.000 pts 	| 10 / 10 tests passed 
+element		:  25.000 pts 	| 10 / 10 tests passed 
+size		:  15.000 pts 	|  5 /  5 tests passed 
+empty?		:  15.000 pts 	|  5 /  5 tests passed
