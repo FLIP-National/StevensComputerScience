@@ -1,0 +1,11 @@
+Grade	: 96 %
+Rubric	:
+	abs 		- 20/20
+	emptylist 	- 3/3
+	cons 		- 6/6 
+	hd 		- 8/8
+	tl 		- 8/8
+	empty? 		- 4/5
+	emptytree	- 5/5
+	node 		- 15/15
+	caseT 		- 27/30

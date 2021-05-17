@@ -1,0 +1,5 @@
+Grade	: 77.5 %
+Reason	: Unspecified
+Thoughts: Probably cause I did not implement  both versions of 
+	  pantograph.
+Comments: Good Luck.
