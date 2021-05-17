@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <title>IoT Details</title>
+  <head><script src="main.js"></script></head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <body class="-black">
+
+  <nav class="-sidebar -bar-block -small -hide-small -center">
+    <a href="login.html" class="-bar-item -button -padding-large -hover-black">
+      <i class="fa fa-sign-out -xxlarge"></i>
+      <p>LOG OUT</p>
+    </a>
+    <a href="#main" class="-bar-item -button -padding-large -hover-black">
+      <i class="fa fa-gears -xxlarge"></i>
+      <p>MAIN DISPLAY</p>
+    </a>
+    <a href="#cam" class="-bar-item -button -padding-large -hover-black">
+      <i class="fa fa-video-camera -xxlarge"></i>
+      <p>CAMERA</p>
+    </a>
+    <a href="#iot" class="-bar-item -button -padding-large -hover-black">
+      <i class="fa fa-envelope -xxlarge"></i>
+      <p>SYSTEM LOGS</p>
+    </a>
+  </nav>
+
+  <!-- Navbar on small screens -->
+  <div class="-top -hide-large -hide-medium" id="myNavbar">
+    <div class="-bar -black -opacity -hover-opacity-off -center -small">
+      <a href="#home" class="-bar-item -button" style="width:25% !important">LOGOUT</a>
+      <a href="#main" class="-bar-item -button" style="width:25% !important">MAIN</a>
+      <a href="#cam" class="-bar-item -button" style="width:25% !important">CAMERA</a>
+      <a href="#iot" class="-bar-item -button" style="width:25% !important">SYSTEM LOGS</a>
+    </div>
+  </div>
+
+  <div class="-padding-large">
+
+    <i class="fa fa-train -xxlarge -trainicon"></i>
+    <!-- MAIN SECTION -->
+    <div class="-content -justify -text-grey -padding-64" id="main">
+      <h2 class="-text-light-grey">MAIN DISPLAY</h2>
+      <hr style="width:200px;" class="-opacity">  
+    </div>
+    <div class="-center -content -justify -text-grey -padding-64" style="margin-top:0px;margin-bottom:40px;">
+      <p class="-text-green" style="font-size:300px;margin:0px;" id="Speed">0</p>
+      <p style="font-size:50px;">MPH</p>
+      <div class="-third -section"><span class="-medium" id="EngTemp">0</span> °F<br>Engine</div>
+      <div class="-third -section"><span class="-medium" id="OutTemp">0</span> °F<br>Outside</div>
+      <div class="-third -section"><span class="-medium" id="RPM">0</span><br>RPM</div>
+      <div class="-third -section">X: <span class="-medium" id="Lat">0</span><br>Latitude</div>
+      <div class="-third -section">Y: <span class="-medium" id="Long">0</span><br>Longitude</div>
+      <div class="-third -section"><span class="-medium" id="RPMs">0</span> MPH<br>RPM Speed</div>
+    </div>
+    <br>
+    
+    <div style = "margin: 3rem" class = "-center">
+      <span id = "speedWarning" style="background-color: green;padding-left:100px;padding-right:100px;padding-top:10px;padding-bottom:10px;">Speed Status: --</span>
+    </div>
+    <div style = "margin: 3rem" class = "-center">
+      <span id = "rpmWarning" style="background-color: green;padding-left:100px;padding-right:100px;padding-top:10px;padding-bottom:10px;">Slippage Status: --</span>
+    </div>
+    <div style = "margin: 3rem" class = "-center">
+      <span id = "tempWarning" style="background-color: green;padding-left:100px;padding-right:100px;padding-top:10px;padding-bottom:10px;">Temperature Status: --</span>
+    </div>
+    <div style = "margin: 3rem" class = "-center">
+      <span id = "objectDetection" style="background-color: green;padding-left:100px;padding-right:100px;padding-top:10px;padding-bottom:10px;">Object Status: --</span>
+    </div>
+    <div style = "margin: 3rem" class = "-center">
+      <span id = "gateStat" style="background-color: green;padding-left:100px;padding-right:100px;padding-top:10px;padding-bottom:10px;">Gate Status: --</span>
+    </div>
+    <div class = "-center" style = "padding-bottom:15px;">
+      <button type = "submit" onclick = "getRandInput()" class = "nicebutton"> TESTING </button>
+    </div>
+
+    <!-- CAMERA SECTION-->
+    <div class="-content -justify -text-grey -padding-64" id="cam">
+      <h2 class="-text-light-grey">CAMERA</h2>
+      <hr style="width:200px;" class="-opacity">
+      <div class="-center"><span id="container"><video autoplay="true" id="videoElement"></video></span></div>
+      <script>
+            var video = document.querySelector("#videoElement");
+        
+            if (navigator.mediaDevices.getUserMedia) {
+                navigator.mediaDevices.getUserMedia({ video: true })
+            .then(function (stream) {
+              video.srcObject = stream;
+            })
+            .catch(function (err0r) {
+              console.log("Something went wrong!");
+            });
+        }
+      </script>  
+    </div>
+    
+
+    <!-- STYSTEM LOGS SECTION -->
+    <div class="-content -justify -text-grey -padding-64" id="iot">
+      <h2 class="-text-light-grey" style="margin-bottom: 0px;">SYSTEM LOGS</h2>
+      <hr style="width:200px;" class="-opacity">
+      <table id="Logs" style="width:100%">
+        <tr>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Speed</th>
+          <th>RPM</th>
+          <th>Eng. Temp.</th>
+          <th>Out. Temp.</th>
+          <th>Conductor</th>
+        </tr>
+        <tr>
+          <td>4-26-2021</td>
+          <td>18:06:00</td>
+          <td>100</td>
+          <td>100</td>
+          <td>80</td>
+          <td>100</td>
+          <td>Example</td>
+        </tr>
+      </table>
+      <br>
+      <div class = "-center" style = "padding-bottom:15px;">
+        <button type = "submit" onclick = "downloadData()" class = "nicebutton"> DOWNLOAD </button>
+      </div>  
+    </div>
+      
+
+  </div>
+
+  <footer class="-content -padding-64 -text-grey -center">
+    Copyright © 2021 LittleEngineersThatCould. All rights rights reserved. 
+  </footer>
+
+  </body>
+</html>
