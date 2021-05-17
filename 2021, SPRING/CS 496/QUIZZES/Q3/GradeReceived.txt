@@ -1,0 +1,19 @@
+Grade	: 70 %
+Reason	: 
+"
+Pair test case 1: 2 
+Pair test case 2: 3 
+Pair test case 3: 2 
+Unpair test case 1: -1 
+Unpair test case 2: -2 
+An example solution would have been: 
+| Unpair(id1,id2,e1,e2) -> 
+  eval_expr e1 >>= 
+  pair_of_pairVal >>= fun p-> 
+  extend_env id1 (fst(p)) >>+ 
+  extend_env id2 (snd(p)) >>+ 
+  eval_expr e2 
+
+Try not to force cast e1 and the id's with Var, instead you should try and use the environment's function extend_env" 
+
+- Eric Altenburg
