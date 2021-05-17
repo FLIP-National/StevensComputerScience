@@ -1,0 +1,38 @@
+(* 
+   Name: Cindy Zhang
+   Date: 03/31/2021
+   Pledge: I pledge my honor that I have abided by the Stevens Honor System.
+*)	
+
+in letrec sizet(target) = 
+    caseT target of 
+	{
+      		emptytree -> 0,
+      		node(data, left, right) -> 1 + sizet(left) + sizet(right)
+    	}
+in sizet <tree>";;
+
+in letrec mapt(target) = 
+	proc (function) {
+    	caseT target of 
+	{
+      		emptytree -> emptytree,
+      		node(data, left, right) -> 
+			node((function data), 
+			    ((mapt left) function), 
+                            ((mapt right) function))
+    	}
+	}
+in ((mapt <tree>) <function>)";;
+
+in letrec foldt(basecase target) = 
+	proc (function) {
+    	caseT target of 
+	{
+      		emptytree -> basecase,
+      		node(data, left, right) -> 
+			function data 
+			(foldt function basecase left) 
+			(foldt function basecase right)
+    	}
+	};;
