@@ -1,0 +1,8 @@
+Grade	: 80%
+Reason	:
+" Exercise 1.
+-1 Overall expression not present in the type derivation
+
+Exercise 2
+2) -1. Expression does not have required type"
+- Eduardo Bonelli
