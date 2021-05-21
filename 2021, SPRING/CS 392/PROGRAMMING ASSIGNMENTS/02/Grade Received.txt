@@ -1,0 +1,5 @@
+Grade	: 91.6
+Reason	: Failed three test cases because of printing the wrong error when another was expected. And in one case just not printing the help message. One test case failed: Max number of integers test failed, possibly due to not allocating enough memory though I couldn't find the error just from a simple look at the code.
+
+Stephen Szemis, Mar 7 at 5:49pm
++5 for submitting on time
