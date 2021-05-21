@@ -1,0 +1,14 @@
+Name	: Cindy Zhang
+Pledge	: I pledge my honor that I have abided by the Stevens Honor System.
+
+What CPU do you have? 
+>> AMD Ryzen 7 2700X Eight-Core Processor
+
+Does the time scale linearly with the number of threads? 
+>> It is relatively linear.
+
+If not, does it continue to improve, plateau, or start to decline? 
+>> It improved then on my last thread the time increased.
+
+Explain your findings in just a few sentences.
+>> The times keeps going down which means that it started to improve but then my last thread went up.

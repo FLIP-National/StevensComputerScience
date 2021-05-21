@@ -1,0 +1,19 @@
+Name	: Cindy Zhang
+Pledge	: I pledge my honor that I have abided by the Stevens Honor System.
+
+./mtsieve -s100 -e200000000 -t1	: 0m2.200s
+./mtsieve -s100 -e200000000 -t2 : 0m1.506s
+./mtsieve -s100 -e200000000 -t3 : 0m1.361s
+./mtsieve -s100 -e200000000 -t4 : 0m1.224s
+./mtsieve -s100 -e200000000 -t5 : 0m1.243s
+./mtsieve -s100 -e200000000 -t6 : 0m1.216s
+./mtsieve -s100 -e200000000 -t7 : 0m1.191s
+./mtsieve -s100 -e200000000 -t8 : 0m1.213s
+./mtsieve -s100 -e200000000 -t9 : 0m1.201s
+./mtsieve -s100 -e200000000 -t10: 0m1.195s
+./mtsieve -s100 -e200000000 -t11: 0m1.201s
+./mtsieve -s100 -e200000000 -t12: 0m1.212s
+./mtsieve -s100 -e200000000 -t13: 0m1.222s
+./mtsieve -s100 -e200000000 -t14: 0m1.193s
+./mtsieve -s100 -e200000000 -t15: 0m1.151s
+./mtsieve -s100 -e200000000 -t16: 0m1.181s
