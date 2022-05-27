@@ -1,39 +1,35 @@
+/*
+    Function questionOne takes in an Array Parameter.
+    Returns the sum of the squares of all the number in the array.
+*/
 const questionOne = function questionOne(arr) {
-    return arr.reduce((a, b) => a*a + b*b)
+    return arr.reduce((a, b) => a + (b*b), 0);
 }
 
+/*
+    Function questionTwo takes in a Number Parameter.
+    This parameter represents the index.
+    Returns the fibonacci that corresponds to index given.
+*/
 const questionTwo = function questionTwo(num) { 
-    var x = 1, y = 0, tmp;
-    while (num-1 >= 0) {
-        temp = x; 
-        x = x + y; 
-        y = temp;
-        num--;
-    }
-
-    return y;
+    return num < 1 ? 0 : num <= 2 ? 1 : questionTwo(num - 1) + questionTwo(num - 2);
 }
 
+/*
+    Function questionThree takes in a String Parameter.
+    Returns the number of vowels contained in the String.
+    Note: We're not counting y as a vowel.
+*/
 const questionThree = function questionThree(text) {
-    var a = text.replaceAll("a","").length;
-    var e = text.replaceAll("e","").length;
-    var i = text.replaceAll("i","").length;
-    var o = text.replaceAll("o","").length;
-    var u = text.replaceAll("u","").length;
-    return (5 * text.length) - a - e - i - o - u;
+    return text.length - text.replace(/[aeiou]/g,"").length;
 }
 
+/*
+    Function questionFour takes in a Number Parameter.
+    Returns the factorial of that Number.
+*/
 const questionFour = function questionFour(num) {
-    var factNum = 1;
-
-    if(num < 0) return NaN;
-    
-    while (num > 0) {
-        factNum *= num;
-        num--;
-    }
-
-    return factNum;
+    return num < 0 || num%1 ? NaN : num == 0 ? 1: questionFour(num - 1) * num;
 }
 
 module.exports = {
