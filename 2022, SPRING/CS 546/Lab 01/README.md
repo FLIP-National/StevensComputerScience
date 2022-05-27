@@ -1,7 +1,3 @@
-<!-- CONTRIBUTIONS / FORKS -->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -135,6 +131,7 @@ This function should calculate the Fibonacci (Links to an external site.) that c
 |     9	    |    34	    |  Fibonacci of 9 is Fibonacci(8) + Fibonacci(7)    |
 |    10	    |    55	    |  Fibonacci of 10 is Fibonacci(9) + Fibonacci(8)   |
 |    11	    |    89	    |  Fibonacci of 11 is Fibonacci(10) + Fibonacci(9)  |
+
 And so on.
 
 <div id="q3"></div>
