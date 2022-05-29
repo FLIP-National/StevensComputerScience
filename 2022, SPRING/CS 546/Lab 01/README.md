@@ -1,3 +1,5 @@
+# An Intro to Node
+
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -26,7 +28,7 @@
 <div id="lab_details"></div>
 <div id="prompt"></div>
 
-# Prompt: An Intro to Node
+# Prompt
 ## Overall:
 - [ ] creating several functions to practice JavaScript syntax. 
 - [ ] running several functions to practice JavaScript syntax.
