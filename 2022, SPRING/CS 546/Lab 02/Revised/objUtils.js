@@ -1,122 +1,64 @@
-const isObjectArray = function isObjectArray(objects) {
-    for(i in objects) {
-        // console.log(typeof(objects[i]));
-        if(typeof(objects[i]) != "object") {
-            throw new Error("Invalid Object in Array.");
-        }
-        if(Object.keys(objects[i]).length == 0) {
-            throw new Error("Object in Array is Empty.");
-        }
-    }
-
-    return true;
-}
-
-const validValues = function validValues(object){
-    for(i in object) {
-        if(typeof(object[i]) != "number") {
-            throw new Error("Type Error: Values should be a number.");
-        }
-    }
-
-    return true;
-}
-
-const makeArrays = function makeArrays(objs){
-    if(objs === undefined){
-        throw new Error("No Array Exists.");
-    }
-    else if (!Array.isArray(objs)){
-        throw new Error("Not a Proper Array.");
-    }
-    else if(objs.length < 2){
-        throw new Error("Array has invalid size.");
-    }
-    else {
-        isObjectArray(objs);
-        var newArray = [];
-        for(i in objs) {
-            for (j in objs[i]) {
-                let tempArray = [];
-                tempArray.push(j);
-                tempArray.push(objs[i][j]);
-                newArray.push(tempArray);
-            }
-        }
-        return newArray;
-    }
-}
-
 /*
-const first = { x: 2, y: 3};
-const second = { a: 70, x: 4, z: 5 };
-const third = { x: 0, y: 9, q: 10 };
-const fourth = {};
-console.log([first, second, third].length);
-console.log(makeArrays([first, second, third]));
-console.log(makeArrays([second, third]));
-console.log(makeArrays([third, first, second]));
-console.log(makeArrays([fourth, fourth]));
-console.log(Object.keys(fourth).length);
+    Helper Function takes in an Array Parameter.
+    Checks if the array is a valid object array.
+    Returns a boolean.
 */
+const validArray = function validArray(array) {
+    if(!array) throw ": Missing parameter 'array'.";
+    if(!Array.isArray(array)) throw ": Incorrect data type, expecting array.";
+    if(array.length == 0) throw ": Empty array.";
+    return array.every(element => { return typeof element === 'object' && Object.keys(element).length !== 0; });
+}
+
+const validObject = function validObject(object) {
+    if(!object) throw ": Missing parameter 'object'";
+    if(typeof object !== "object") throw ": Incorrect data type, expecting object.";
+    if(Array.isArray(object)) throw ": Incorrect data type, no arrays.";
+    return Object.values(object).every((value, _index, arr) => { return typeof value !== 'number' ? false : true; });
+}
+
+const makeArrays = function makeArrays(arrayOfObjects){
+    if(!arrayOfObjects) throw ": Missing Parameter 'arrayOfObjects'.";
+    if(!validArray(arrayOfObjects)) throw ": Invalid Array.";
+    if(arrayOfObjects.length < 2) throw ": Invalid Array Size, should contain at least 2 elements.";
+    
+    let final = [];
+    arrayOfObjects.forEach(obj => {
+        for(let [key, value] of Object.entries(obj)) {
+            final.push([key, value]);
+        }
+    });
+    
+    return final;
+}
 
 const isDeepEqual = function isDeepEqual(objOne, objTwo){
-    // console.log(typeof(objTwo));
-    if(objOne === undefined || objTwo === undefined) {
-        throw new Error("Missing parameters");
-    }
-    else if(typeof(objOne) != "object" || typeof(objTwo) != "object") {
-        throw new Error("Type of parameter is wrong.");
-    }
-    else if(Array.isArray(objOne) || Array.isArray(objTwo)) {
-        throw new Error("Type of parameter is wrong.");
-    }
-    else {
-        for(i in objOne) {
-            if(typeof(objOne[i]) == "object" && typeof(objTwo[i]) == "object") {
-                isDeepEqual(objOne[i], objTwo[i]);
-            }
-            if(objOne[i] != objTwo[i]) {
-                return false;
-            }
-        }
+    if(!objOne) throw ": Missing Parameter 'objOne'";
+    if(!objTwo) throw ": Missing Parameter 'objTwo'";
+    if(typeof objOne !== "object") throw ": Incorrect data type, expecting object.";
+    if(typeof objTwo !== "object") throw ": Incorrect data type, expecting object.";
+    if(Array.isArray(objOne)) throw ": Incorrect data type, no Arrays."
+    if(Array.isArray(objTwo)) throw ": Incorrect data type, no Arrays."
+    if(Object.keys(objOne).length !== Object.keys(objTwo).length) return false;
 
-        return true;
+    for(let [key, value] of Object.entries(objOne)) {
+        if(!objTwo[key]) return false;
+        if(typeof value === "object") return isDeepEqual(objOne[key], objTwo[key]);
+        else if (value != objTwo[key]) return false;
     }
+
+    return true;
 }
-
-/*
-const first = {a: 2, b: 3};
-const second = {a: 2, b: 4};
-const third = {a: 2, b: 3};
-const forth = {a: {sA: "Hello", sB: "There", sC: "Class"}, b: 7, c: true, d: "Test"};
-const fifth  = {c: true, b: 7, d: "Test", a: {sB: "There", sC: "Class", sA: "Hello"}};
-console.log(isDeepEqual(first, second)); // false
-console.log(isDeepEqual(forth, fifth)); // true
-console.log(isDeepEqual(forth, third)); // false
-console.log(isDeepEqual({}, {})); // true
-console.log(isDeepEqual([1,2,3], [1,2,3])); // throws error 
-console.log(isDeepEqual("foo", "bar")); // throws error
-*/
 
 const computeObject = function computeObject(object, func) {
-    if(object === undefined || func === undefined) {
-        throw new Error("Missing parameter.");
-    }
-    else if (typeof(object) != "object" || (typeof(func) != "function")) {
-        throw new Error("Type of parameter is wrong.");
-    }
-    else {
-        validValues(object);
-        for(i in object) {
-            object[i] = func(object[i]);
-        }
-
-        return object;
-    }
+    if(!object) throw ": Missing Parameter 'object'";
+    if(!func) throw ": Missing Parameter 'func'";
+    if(!validObject(object)) throw ": Invalid Object.";
+    if(typeof func !== "function") throw ": Incorrect data type, expecting function.";
+    
+    return Object.fromEntries( Object.entries(object).map(([k, v], i) => [k, func(v, k, i)]));
 }
 
-// console.log(computeObject({ a: 3, b: 7, c: 5 }, n => n * 2));
 
 module.exports = {
     firstName: "CINDY", 
